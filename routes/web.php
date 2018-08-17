@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', ['as'=>'home', 'uses'=>'PagesController@home']);
+
+Route::get('contacto/{asd?}', ['as'=>'contacto', 'uses'=>'PagesController@contact']);
+Route::post('contacto' ,'PagesController@mensajes');
+
+Route::get('saludo/{nombre?}', ['as'=>'saludos', 'uses'=>'PagesController@saludo']);
+
+
+
+
