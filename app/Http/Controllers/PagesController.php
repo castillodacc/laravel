@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\RequestMessage;
 
 class PagesController extends Controller
 {
@@ -23,8 +24,8 @@ class PagesController extends Controller
     	return view('saludo', compact('nombre', 'consola'));
     }
 
-    public function mensajes(Request $request){
-    	
+    public function mensajes(RequestMessage $request){
+    
     	if($request->has('nombre')){
     		return 'El nombre es: '.$request->input('nombre'); 
     	}

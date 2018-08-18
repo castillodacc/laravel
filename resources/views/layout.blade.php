@@ -10,6 +10,11 @@
 		color: #165616;
 	}
 
+	.error {
+		color:red;
+		font-size: 20px;
+	}
+
 	</style>
 
 	<?php function activeMenu($url){ return request()->is($url) ? 'active' : ''; } ?>
