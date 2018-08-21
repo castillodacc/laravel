@@ -2,6 +2,9 @@
 
 @section('content')
 
+@if(session()->has('info'))
+	{{ session('info') }}
+@else
 	<h1>Formulario</h1>
 	<form method="post" action="contacto">
 		<input type="hidden" value="{{ csrf_token() }}">
@@ -16,5 +19,5 @@
 		{!! $errors->first('mensaje','<span class=error>:message</span>') !!}
 		<input type="submit" value="Enviar">
 	</form>
-
+@endif
 @stop
