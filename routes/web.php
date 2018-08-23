@@ -20,7 +20,7 @@ Route::post('contacto' ,'PagesController@mensajes');
 Route::get('saludo/{nombre?}', ['as'=>'saludos', 'uses'=>'PagesController@saludo']);
 
 
-Route::get('messages/create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
+/*Route::get('messages/create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
 
 Route::post('messages',['as' => 'messages.store','uses' => 'MessagesController@store']);
 
@@ -33,6 +33,8 @@ Route::get('messages/show/{id?}', ['as' => 'messages.show', 'uses' => 'MessagesC
 Route::put('messages/{id?}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
 
 Route::delete('messages/{id}', ['as' => 'messages.destroy', 'uses' => 'MessagesController@destroy']);
+*/
 
+Route::resource('messages','MessagesController');
 
 
